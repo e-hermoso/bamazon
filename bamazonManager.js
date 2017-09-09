@@ -9,7 +9,7 @@ var connection = mysql.createConnection({
   database: "bamazon"
 })
 connection.connect(function(err){
-  console.log("Connected as id: " + connection.threadId);
+  // console.log("Connected as id: " + connection.threadId);
   menuOption();
 })
 var choices = ["View Products for Sale","View Low Inventory","Add to Inventory","Add New Product"]

@@ -17,25 +17,30 @@ connection.connect(function(err){
 var display = function(){
   connection.query('SELECT*FROM products', function(err, result){
     // console.log(result);
+    var Table = require('cli-table2');
+    // instantiate
+    var table = new Table({
+      head: ['ITEM_ID', 'PRODUCT', 'PRICE'],
+      colWidths: [20, 20, 20]
+    });
+
+    // table is an Array, so you can `push`, `unshift`, `splice` and friends
+    for (var i = 0; i < result.length; i++){
+    table.push(
+      [result[i].item_id, result[i].product_name, result[i].price]
+      );
+    }
+    console.log(table.toString())
     inquirer.prompt({
       name: 'chooseProduct',
-      type: 'list',
-      choices: function(products){
-        var choiceArray = [];
-        for (var i = 0; i < result.length; i++){
-          choiceArray.push(result[i].product_name);
-          // console.log(choiceArray);
-        }
-        return choiceArray;
-        // console.log("Selecting all products...\n");
-      },
-      message: '\nWelcome to Hack Bamazon \n' + 'Pick a product you will like to purchase\n'
+      type: 'input',
+      message: '\nWelcome to Hack Bamazon \n' + '\nEnter the item ID of the product you will like to purchase\nitem ID: '
     }).then(function(answer) {
       for (var i = 0; i < result.length; i++) {
-        if (result[i].product_name == answer.chooseProduct){
+        if (result[i].item_id == answer.chooseProduct){
           var chosenItem = result[i];
           // console.log("LOOK AT ME : " + chosenItem);
-          console.log(answer.chooseProduct);
+          console.log("You purchased "+ result[i].product_name);
           inquirer.prompt({ //then we ask the user for what they will like to bid
             name: "quantity",
             type: "input",
