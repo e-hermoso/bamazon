@@ -55,10 +55,6 @@ The image below shows when a supervisor selects View Product Sales by Department
 
 ![Alt text](images/superVisor.png?raw=true)
 
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
 ## Authors
 
 * **Eric Hermoso** - *Initial work* - [e-hermoso](https://github.com/e-hermoso)
