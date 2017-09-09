@@ -46,7 +46,7 @@ The image below shows when the Manager chooses View Products from the menu.
 
 ### Running Supervisor app 
 
-Running this application will all the Supervisor View Product Sales by Department
+Running this application will allow the Supervisor View Product Sales by Department
 as well as adding a new Department.
 ```
 node bamazonSupervisor.js
