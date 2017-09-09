@@ -24,7 +24,7 @@ In order to run this application you must have node installed https://github.com
 
 ### Running customer app 
 
-Running this application will first display all of the items available for sale. Include the ids, names, and prices of products for sale.
+Running this application will first display all of the items available for sale, including their ids, names, and prices. These products are stored in a databse table called products(SQL).
 
 ```
 node bamazonCustomer.js
@@ -35,12 +35,11 @@ The image below shows the products on stock for the Customer.
 
 ### Running Manager app 
 
-Running this application will all the Manager View Product Sales and Low Inventory
-as well as adding to Inentory and new Products
+Running this application will allow the Manager to choose from four options: View Product for Sales, View Low Inventory, Add to Inventory and Add New Products.
 ```
 node bamazonManager.js
 ```
-The image below shows when the Manager chooses View Products from the menu.
+The image below shows when the Manager chooses View Products for Sales from the menu.
 
 ![Alt text](images/manager.png?raw=true)
 
@@ -51,7 +50,7 @@ as well as adding a new Department.
 ```
 node bamazonSupervisor.js
 ```
-The image below shows when a supervisor selects View Product Sales by Department, the app should display a summarized table in their terminal/bash window. Use the table below as a guide.
+The image below shows when a supervisor selects View Product Sales by Department, the app displays a summarized table in their terminal/bash window.
 
 ![Alt text](images/superVisor.png?raw=true)
 
